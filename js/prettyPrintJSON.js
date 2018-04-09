@@ -5,15 +5,15 @@ $(function(){
   $('#searchform').submit(function(){
     var searchterms=$("#searchterms").val();
     //call search youtube function
-    getResultsFromOMDB(searchterms);
+    getResultsFromIGDB(searchterms);
     return false;
   });
 });
 
-function getResultsFromOMDB(searchterms){
+function getResultsFromIGDB(searchterms){
   //call api using ajax
   //build url for the request
-  var url ="http://www.omdbapi.com/?apikey=1b4f6264&s=" + searchterms;
+  var url ="http://api.igdb.com/?apikey=8fd263ee7124bbe3816cb5bba4e3c3ca&s=" + searchterms;
   //use jquery json shortcut
   $.getJson(url,function(jsondata){
     //handle the results
