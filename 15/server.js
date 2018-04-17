@@ -52,7 +52,7 @@ app.post('/login', function (req, res, next) {
       if(!user) return res.send('Not logged in!');
 
       req.session.user = email;
-      return res.send('Logged In!');
+      return res.send(Logged In);
    });
 });
 
