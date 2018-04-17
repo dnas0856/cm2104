@@ -28,3 +28,34 @@ app.get('/quotes',function(req,res){
     res.send(output);
   });
 });
+
+app.post('/signup', function (req, res, next) {
+    var user = {
+       Name: req.body.name,
+       Email: req.body.email,
+       Pass: req.body.pass,
+   };
+   var UserReg = MongoClient.model('UserReg', RegSchema);
+   UserReg.create(user, function(err, newUser) {
+      if(err) return next(err);
+      req.session.user = email;
+      return res.send('Logged In!');
+   });
+});
+
+app.post('/login', function (req, res, next) {
+   var email = req.body.email;
+   var pass = req.body.pass;
+
+   User.findOne({Email: email, Pass: pass}, function(err, user) {
+      if(err) return next(err);
+      if(!user) return res.send('Not logged in!');
+
+      req.session.user = email;
+      return res.send('Logged In!');
+   });
+});
+
+app.get('/logout', function (req, res) {
+   req.session.user = null;
+});
