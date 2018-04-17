@@ -12,5 +12,28 @@
     <li><a href="/update.html">Update Quote</a></li>
     <li><a href="/delete.html">Delete Quote</a></li>
   </ol>
+  <div class="form-group">
+    <input type="text" class="form-control" id="name" placeholder="name"><br>
+    <input type="email" class="form-control" id="email" placeholder="Email"><br>
+    <input type="password" class="form-control" id="pass" placeholder="Password"><br>
+    <input type="number" class="form-control" id="num" placeholder="Number"><br>
+    <button type="submit" class="btn btn-primary" id="reg-form-btn">Registration!</button>
+</div>
+<script>
+    $(document).ready(function() {
+        $("#reg-form-btn").click(function() {
+            var name = $("#name").val();
+            var email = $("#email").val();
+            var pass = $("#pass").val();
+            var num = $("#num").val();
+            $.post("/", {
+                Name: name,
+                Email: email,
+                Pass: pass,
+                Num: num
+            });
+        });
+    });
+</script>
 </body>
 </html>
