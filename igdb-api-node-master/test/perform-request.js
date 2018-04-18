@@ -11,7 +11,7 @@ import configuration from '../configuration';
 import nock from 'nock';
 import performRequest from '../js/perform-request';
 
-configuration.threeScale.key = 'example-api-key-123';
+configuration.threeScale.key = '8fd263ee7124bbe3816cb5bba4e3c3ca';
 
 describe('perform-request', () => {
     it('should returconfigurationn a rejected Promise for non-200 HTTP status codes', () => {
