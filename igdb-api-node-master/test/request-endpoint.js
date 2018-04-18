@@ -12,7 +12,7 @@ import igdb from '../js/index';
 import nock from 'nock';
 import requestEndpoint from '../js/request-endpoint';
 
-configuration.threeScale.key = 'example-api-key-123';
+configuration.threeScale.key = '8fd263ee7124bbe3816cb5bba4e3c3ca';
 
 describe('request-endpoint', () => {
     it('should return a rejected Promise if no endpoint is provided', () => requestEndpoint().catch(error => {
