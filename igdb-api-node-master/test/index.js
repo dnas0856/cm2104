@@ -56,7 +56,7 @@ describe('client', () => {
             reqheaders: {
                 Accept: 'application/json',
                 'user-key': headerValue => {
-                    expect(headerValue).to.equal('example-api-key-123');
+                    expect(headerValue).to.equal('8fd263ee7124bbe3816cb5bba4e3c3ca');
                     return headerValue;
                 }
             }
