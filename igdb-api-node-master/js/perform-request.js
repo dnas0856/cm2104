@@ -7,7 +7,7 @@ import request from './request-promise';
  * @arg {object} [apiService] The API service object containing endpoint details and key
  * @returns {Promise<Object>} The parsed HTTP response
  * @example
- * performRequest('http://example.com/api/v1/exampleEndpoint', 'example-api-key-123').then(console.log)
+ * performRequest('http://example.com/api/v1/exampleEndpoint', '8fd263ee7124bbe3816cb5bba4e3c3ca').then(console.log)
  */
 export default (url, apiService) => {
     const options = {
