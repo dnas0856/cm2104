@@ -11,7 +11,7 @@ import configuration from '../configuration';
 import igdb from '../js/index';
 import nock from 'nock';
 
-const apiKey = 'example-api-key-123';
+const apiKey = '8fd263ee7124bbe3816cb5bba4e3c3ca';
 
 const xNextPage = '/games/scroll/cXVlcnlBbmRGZXRjaDsxOzE5OkhBck1wUUZsUnpPUDgwMGtDN0hSdEE7MDs=';
 
