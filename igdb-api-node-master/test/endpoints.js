@@ -11,7 +11,7 @@ import configuration from '../configuration';
 import igdb from '../js/index';
 import nock from 'nock';
 
-configuration.threeScale.key = 'example-api-key-123';
+configuration.threeScale.key = '8fd263ee7124bbe3816cb5bba4e3c3ca';
 const apiShould = 'should make the correct HTTP request to IGDB based on passed arguments';
 
 describe('API endpoints', () => {
