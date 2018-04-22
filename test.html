@@ -1,0 +1,45 @@
+ <html>
+      <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+
+        <script>
+      var apikey = "aa62252b36e62f2afa79ad99e6da043eb90e2da4";
+var baseUrl = "http://www.giantbomb.com/api";
+
+// construct the uri with our apikey
+var GamesSearchUrl = baseUrl + '/search/?api_key=' + apikey + '&format=json';
+var query = "Batman";
+
+$(document).ready(function() {
+
+  // send off the query
+  $.ajax({
+    url: GamesSearchUrl + '&query=' + encodeURI(query),
+    dataType: "json",
+    success: searchCallback
+  });
+
+
+    // callback for when we get back the results
+    function searchCallback(data) {
+        $('body').append('Found ' + data.total + ' results for ' + query);
+        var games = data.game;
+        $.each(games, function(index, game) {
+            $('body').append('<h1>' + game.name + '</h1>');
+            $('body').append('<p>' + game.description + '</p>');
+            $('body').append('<img src="' + game.posters.thumbnail + '" />');
+        });
+    }
+});
+   
+
+
+        </script>
+
+      </head>
+      <body>
+      <h1>Game Search</h1>
+      <input id="game" type="text" /><button id="search">Search</button>
+      <div id="myelement"></div>
+      </body>
+    </html
