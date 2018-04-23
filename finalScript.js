@@ -13,7 +13,7 @@ $(function(){
 function getResultsFromOMDB(searchterms){
   //call api using ajax
   //build url for the request
-  var url =" http://www.omdbapi.com/?i=tt3896198&apikey=1b4f6264&s=" + searchterms;
+  var url ="http://www.giantbomb.com/api/search/?api_key=[YOUR-KEY]&format=json&query=searchterms&resources=game" ;
   //use jquery json shortcut
   $.getJSON(url,function(jsondata){
     //handle the results
